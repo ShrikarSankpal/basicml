@@ -26,5 +26,13 @@ docker run -it my_app
 Another method to run cmd in container:
 docker exec -it container_name /bin/bash
 
-Mounting a local file inside a container:
+Mounting a local file inside a container(You can also mount multiple files/folders with multiple -v):
 docker run -v path/in/host/filename.txt:path/in/container/filename.txt my_app
+
+Building training model image:
+docker build -t mlapp_training -f Dockerfile.training .
+
+Running training model image:
+docker run -it -v /home/user/projects/basicml/data/training/:/projects/basicml/data/training/ -v /home/user/projects/basicml/plots/:/projects/basicml/plots/ -v /home/user/projects/basicml/resources/:/projects/basicml/resources mlapp_training
+
+
