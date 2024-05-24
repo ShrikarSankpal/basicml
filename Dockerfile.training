@@ -4,14 +4,11 @@ WORKDIR /projects/basicml
 
 COPY ./scripts/training/ /projects/basicml/scripts/training/
 
-RUN pip install --no-cache-dir --upgrade pip setuptools
+RUN pip install --no-cache-dir --upgrade pip setuptools \
+    && pip install --no-cache-dir pipreqs \
+    && pipreqs /projects/basicml/scripts/training/ --force \
+    && mv /projects/basicml/scripts/training/requirements.txt /projects/basicml/requirements-training.txt \
+    && pip install --no-cache-dir -r /projects/basicml/requirements-training.txt
 
-RUN pip install --no-cache-dir pipreqs
-
-RUN pipreqs /projects/basicml/scripts/training/ --force
-
-RUN mv /projects/basicml/scripts/training/requirements.txt /projects/basicml/requirements-training.txt
-
-RUN pip install --no-cache-dir -r /projects/basicml/requirements-training.txt
 
 CMD ["python", "/projects/basicml/scripts/training/main.py"]
