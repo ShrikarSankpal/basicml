@@ -65,7 +65,7 @@ training_logs = {}
 print("Parameter Grid Population Completed.")
 
 print("Starting Iterations Through Random Numbers...")
-random_numbers = [1,1234,300]
+random_numbers = [1]
 for random_number in random_numbers:
     print("random_number: ",random_number)
     separation_distances=[]
