@@ -3,8 +3,6 @@ FROM python:3.12-slim
 WORKDIR /projects/basicml
 
 COPY ./scripts/inference /projects/basicml/scripts/inference
-COPY ./resources/model.pkl /projects/basicml/resources/model.pkl
-COPY ./requirements.txt /projects/basicml/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade pip setuptools \
     && pip install --no-cache-dir pipreqs \

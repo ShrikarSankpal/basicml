@@ -35,4 +35,8 @@ docker build -t mlapp_training -f Dockerfile.training .
 Running training model image:
 docker run -it -v /home/user/projects/basicml/data/training/:/projects/basicml/data/training/ -v /home/user/projects/basicml/plots/:/projects/basicml/plots/ -v /home/user/projects/basicml/resources/:/projects/basicml/resources mlapp_training
 
+Building inference model image:
+docker build -t mlapp_inference -f Dockerfile.inference .
 
+Running inferenfe model image:
+docker run -it -v /home/user/projects/basicml/data/inference/:/projects/basicml/data/inference/ -v /home/user/projects/basicml/resources/:/projects/basicml/resources mlapp_inference

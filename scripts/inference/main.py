@@ -5,7 +5,7 @@ current_dir = os.getcwd()
 pickle_model = os.path.abspath(current_dir+"/resources/model.pkl")
 input_file = os.path.abspath(current_dir+"/data/inference/input_file.dat")
 #output_file = os.path.abspath(current_dir+"/data/inference/output_file.dat")
-output_file = os.path.abspath(current_dir+"/data/inference/combined_csv.csv")
+output_file = os.path.abspath(current_dir+"/data/inference/output_file.csv")
 
 
 def business_rule_anomaly(row,feature1_bounds,feature2_bounds):
