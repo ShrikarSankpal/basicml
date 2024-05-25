@@ -11,3 +11,5 @@ column1,column2,business_rule_anomaly,business_rule_nonanomaly,predictions,final
 1000.0,2000.0,-1,1,-1,Anomaly: Business
 -1000.0,-2000.0,-1,1,1,Anomaly: Business
 0.0,0.0,1,-1,1,NonAnomaly: Business
+10.0,20.0,-1,1,-1,Anomaly: Business
+4.0,7.0,1,1,-1,Anomaly: ML
