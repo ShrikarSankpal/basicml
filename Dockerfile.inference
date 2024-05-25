@@ -6,8 +6,10 @@ COPY ./scripts/inference /projects/basicml/scripts/inference
 COPY ./resources/model.pkl /projects/basicml/resources/model.pkl
 COPY ./requirements.txt /projects/basicml/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade pip setuptools
-
-RUN pip install --no-cache-dir -r /projects/basicml/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip setuptools \
+    && pip install --no-cache-dir pipreqs \
+    && pipreqs /projects/basicml/scripts/inference/ --force \
+    && mv /projects/basicml/scripts/inference/requirements.txt /projects/basicml/requirements-inference.txt \
+    && pip install --no-cache-dir -r /projects/basicml/requirements-inference.txt
 
 CMD ["python", "/projects/basicml/scripts/inference/main.py"]
