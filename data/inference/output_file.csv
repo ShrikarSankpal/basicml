@@ -1,10 +1,10 @@
 column1,column2,business_rule_anomaly,business_rule_nonanomaly,predictions,final
 2.0,3.0,1,1,1,NonAnomaly: ML
 0.0,0.0,1,-1,1,NonAnomaly: Business
-5.0,5.0,1,1,-1,Anomaly: ML
+5.0,5.0,1,1,1,NonAnomaly: ML
 6.0,7.0,1,1,-1,Anomaly: ML
 10.0,5.0,-1,1,-1,Anomaly: Business
-3.0,4.0,1,1,-1,Anomaly: ML
+3.0,4.0,1,1,1,NonAnomaly: ML
 2.0,3.0,1,1,1,NonAnomaly: ML
 0.0,2.5,1,1,1,NonAnomaly: ML
 1.0,2.5,1,1,1,NonAnomaly: ML
@@ -12,4 +12,3 @@ column1,column2,business_rule_anomaly,business_rule_nonanomaly,predictions,final
 -1000.0,-2000.0,-1,1,1,Anomaly: Business
 0.0,0.0,1,-1,1,NonAnomaly: Business
 10.0,20.0,-1,1,-1,Anomaly: Business
-4.0,7.0,1,1,-1,Anomaly: ML
