@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools \
     && pip install --no-cache-dir pipreqs \
     && pipreqs /projects/basicml/scripts/inference/ --force \
     && mv /projects/basicml/scripts/inference/requirements.txt /projects/basicml/requirements-inference.txt \
-    && pip install --no-cache-dir -r /projects/basicml/requirements-inference.txt
+    && pip install --no-cache-dir -r /projects/basicml/requirements-inference.txt \
+    && pip install --no-cache-dir scikit-learn
 
 CMD ["python", "/projects/basicml/scripts/inference/main.py"]
